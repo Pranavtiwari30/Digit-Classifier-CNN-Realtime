@@ -1,4 +1,6 @@
 🔢 Digit Classifier: CNN-Based Real-Time Handwritten Digit Recognition
+
+
 🧠 Objective
 This project aims to recognize handwritten digits in real-time using a Convolutional Neural Network (CNN). The system consists of two main components:
 
@@ -53,25 +55,18 @@ Edit
 │   └── digit_cnn_model.h5
 ├── README.md
 └── requirements.txt
+
+
 🚀 How to Run
 Install requirements:
 
-bash
-Copy
-Edit
 pip install -r requirements.txt
-Train the model (optional if already trained):
 
-bash
-Copy
-Edit
 python model_training/train_model.py
-Run real-time digit recognition:
 
-bash
-Copy
-Edit
 python realtime_inference/app.py
+
+
 👨‍💻 Author
 Pranav Tiwari
 GitHub: @Pranavtiwari30
