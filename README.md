@@ -1,72 +1,51 @@
-🔢 Digit Classifier: CNN-Based Real-Time Handwritten Digit Recognition
+# Digit-Classifier-CNN-Realtime
 
+## Objective
 
-🧠 Objective
-This project aims to recognize handwritten digits in real-time using a Convolutional Neural Network (CNN). The system consists of two main components:
+This project aims to recognize handwritten digits in real-time using a deep learning model. Code is made of two parts:  
+  1. Training the model using the MNIST dataset to classify digits from 0 to 9.  
+  2. Implementing a real-time interface using Pygame and OpenCV, where users can draw digits, which are then recognized by the trained model.
 
-Model Training – Train a deep learning model using the MNIST dataset to classify digits (0–9).
+---
 
-Real-Time Inference Interface – Implement a live digit recognition interface using Pygame and OpenCV, where users can draw digits with a mouse.
+## Project Overview
 
-🚀 Project Overview
-📌 Part 1: Model Training
-Dataset: MNIST — a widely used dataset of handwritten digits.
+### Part 1: Training the Model
 
-Model: A CNN architecture built using Keras/TensorFlow with layers like:
+• Dataset: MNIST, a popular dataset of handwritten digits.  
+• Model Architecture:  
+ o The model uses convolutional neural networks (CNN) with layers such as Conv2D, MaxPool2D, Flatten, Dropout, and Dense.  
+ o The model is optimized using callbacks like EarlyStopping and ModelCheckpoint.  
+• Objective: Train a model capable of recognizing digits (0–9) and save the best-performing model for real-time use.
 
-Conv2D, MaxPooling2D, Dropout, Flatten, and Dense
+---
 
-Optimization:
+### Part 2: Real-Time Digit Recognition
 
-Uses EarlyStopping and ModelCheckpoint callbacks for better training performance.
+• Interface: Pygame is used to create a drawing panel where users can draw digits using their mouse.  
+• Prediction: OpenCV captures the drawing, preprocesses it (resizing and padding), and the deep learning model predicts the digit.  
+• Display: The predicted digit is shown on the screen along with the drawn input.
 
-Goal: Accurately classify digits from 0 to 9 and save the best model for deployment.
+---
 
-🖥️ Part 2: Real-Time Digit Recognition
-Interface: Built using Pygame for drawing digits in real-time.
+## Technologies Used
 
-Preprocessing: Uses OpenCV to resize and format the drawn image to match the model’s input shape.
+• Python  
+• Keras / TensorFlow – For building and training the deep learning model  
+• MNIST Dataset – Used for training and testing  
+• Pygame – For creating a real-time drawing interface  
+• OpenCV – For processing the drawn input and converting it to model-ready format  
 
-Prediction: The trained model classifies the digit and displays it on the screen in real-time.
+---
 
-🛠️ Tech Stack
-Python
+## Folder Structure
 
-Keras / TensorFlow – Deep Learning Framework
-
-OpenCV – Image preprocessing
-
-Pygame – Drawing interface for digit input
-
-MNIST Dataset – For training the digit classifier
-
-📸 Demo Preview
-(Add screenshots or a GIF of real-time digit recognition in action here if you have one)
-
-📂 Folder Structure
-bash
-Copy
-Edit
+```bash
 ├── model_training/
-│   └── train_model.py
+│   └── train_model.py               # Script for training the CNN on MNIST
 ├── realtime_inference/
-│   └── app.py
+│   └── app.py                       # Real-time interface using Pygame + OpenCV
 ├── saved_model/
-│   └── digit_cnn_model.h5
+│   └── digit_cnn_model.h5          # Trained CNN model
 ├── README.md
 └── requirements.txt
-
-
-🚀 How to Run
-Install requirements:
-
-pip install -r requirements.txt
-
-python model_training/train_model.py
-
-python realtime_inference/app.py
-
-
-👨‍💻 Author
-Pranav Tiwari
-GitHub: @Pranavtiwari30
